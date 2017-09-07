@@ -70,7 +70,19 @@ class HangpersonGame
     end
     return displayed
   end
-  
+
+# def word_with_guesses
+#     word_len = @word.length
+#     rtn_str = "-" * word_len
+#     @guesses.each_char do |word_char|
+#       (0..word_len-1).each do |index|
+#         if @word[index] == word_char
+#           rtn_str[index] = word_char
+#         end
+#       end
+#     end
+#     return rtn_str
+#   end
   
   
   def check_win_or_lose
