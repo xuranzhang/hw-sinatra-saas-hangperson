@@ -71,6 +71,7 @@ class HangpersonApp < Sinatra::Base
     ### YOUR CODE HERE ###
       erb :win # You may change/remove this line
     end
+    redirect '/show'
   end
   
   get '/lose' do
@@ -78,6 +79,7 @@ class HangpersonApp < Sinatra::Base
     ### YOUR CODE HERE ###
       erb :lose # You may change/remove this line
     end
+    redirect '/show'
   end
   
 end
