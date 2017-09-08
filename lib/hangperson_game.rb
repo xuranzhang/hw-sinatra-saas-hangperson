@@ -58,31 +58,28 @@ class HangpersonGame
 
 
   def word_with_guesses
+    # word_length = @word.length
+    # guess_length = @guesses.length
+    # displayed = '-' * word_length
+    # for guess_inedx in (0..(guess_length -1)) do
+    #   for word_inedx in (0..(word_length -1)) do
+    #     if @word[word_inedx] == @guesses[guess_inedx]
+    #       displayed[word_inedx] = @word[word_inedx]
+    #     end
+    #   end
+    # end
+    # return displayed
     word_length = @word.length
-    guess_length = @guesses.length
-    displayed = '-' * word_length
-    for guess_inedx in (0..(guess_length -1)) do
-      for word_inedx in (0..(word_length -1)) do
-        if @word[word_inedx] == @guesses[guess_inedx]
-          displayed[word_inedx] = @word[word_inedx]
+    displayed = "-" * word_length
+    @guesses.each_char do |word_char|
+      (0..word_length-1).each do |index|
+        if @word[index] == word_char
+          displayed[index] = word_char
         end
       end
     end
     return displayed
   end
-
-# def word_with_guesses
-#     word_len = @word.length
-#     rtn_str = "-" * word_len
-#     @guesses.each_char do |word_char|
-#       (0..word_len-1).each do |index|
-#         if @word[index] == word_char
-#           rtn_str[index] = word_char
-#         end
-#       end
-#     end
-#     return rtn_str
-#   end
   
   
   def check_win_or_lose
